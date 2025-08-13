@@ -1,134 +1,31 @@
-# Firebase To-Do App
+# Overview
 
-This is a complete, production-ready To-Do List Application that uses Google Firebase (Firestore + Authentication) for its backend.
+As a software engineer, I aim to deepen my expertise in **TypeScript** and **Node.js** by building practical, modular applications that enhance my understanding of type-safe programming and command-line interfaces. This project is a step toward mastering TypeScript’s type system, dynamic module loading, and real-time user interaction in a CLI environment.
 
-## Features
+This software is a command-line chatbot built with **TypeScript** and **Node.js**. It allows users to interact via text input in a terminal, where the chatbot matches inputs against a set of predefined regex-based rules and responds accordingly. The application features a modular rule system, enabling easy extension by adding new rule files, and includes unit tests to ensure reliability.
 
-- **User Authentication**: Secure sign-up, login, and logout with email and password.
-- **Cloud Database**: Tasks are stored and retrieved from Firebase Firestore.
-- **Realtime Updates**: The task list updates in real-time across all devices thanks to Firestore's `onSnapshot` listener.
-- **Full CRUD Functionality**: Users can create, read, update, and delete their own tasks.
-- **Protected Routes**: Only authenticated users can access the main dashboard.
-- **Modern Tech Stack**: Built with React, TypeScript, Vite, and Tailwind CSS.
-- **Secure by Design**: Firestore security rules ensure that users can only access their own data.
+My purpose for creating this software was to explore TypeScript’s capabilities for building robust, maintainable CLI applications. I focused on creating a flexible rule engine, leveraging TypeScript’s type safety to catch errors early, and implementing a clean, extensible architecture to practice modern software engineering principles.
 
-## Tech Stack
+Software Demo Video
 
-- **Frontend**: React, TypeScript, Vite
-- **Routing**: React Router DOM
-- **Styling**: Tailwind CSS
-- **Notifications**: React Hot Toast
-- **Backend**: Firebase (Authentication & Firestore)
+# Development Environment
 
-## Getting Started
+The software was developed using the following tools:
 
-Follow these instructions to get the project up and running on your local machine.
+*   **Visual Studio Code**: A lightweight code editor with excellent TypeScript support and debugging capabilities.
+*   **Node.js**: The runtime environment for executing the TypeScript-compiled JavaScript code.
+*   **TypeScript Compiler (tsc)**: Used to compile TypeScript code to JavaScript.
+*   **Jest**: A testing framework for writing and running unit tests to verify rule-matching logic.
+*   **npm**: The package manager for installing dependencies and managing scripts.
+*   **Git**: Version control system for tracking code changes and hosting the project on GitHub.
 
-### Prerequisites
+The programming language used is **TypeScript**, a superset of JavaScript that adds static types for enhanced code reliability and maintainability. TypeScript was chosen for its strong typing, which helps catch errors at compile time, and its robust support for Node.js development.
 
-- Node.js (v18 or later)
-- npm or yarn
-- A Google Firebase account
+# Useful Websites
 
-### Setup Instructions
+The following websites were helpful in developing this project:
 
-1.  **Clone the repository:**
-
-    ```bash
-    git clone <repository-url>
-    cd firebase-todo-app
-    ```
-
-2.  **Install dependencies:**
-
-    ```bash
-    npm install
-    ```
-
-3.  **Set up Firebase:**
-
-    - Go to the [Firebase Console](https://console.firebase.google.com/) and create a new project.
-    - In your project, go to the **Authentication** section and enable the **Email/Password** sign-in method.
-    - Go to the **Firestore Database** section and create a new database. Start in **test mode** for now. You can apply the security rules later.
-    - In your project settings, find your web app's configuration object. It will look something like this:
-
-      ```javascript
-      const firebaseConfig = {
-        apiKey: "AIzaSy...",
-        authDomain: "your-project-id.firebaseapp.com",
-        projectId: "your-project-id",
-        storageBucket: "your-project-id.appspot.com",
-        messagingSenderId: "...",
-        appId: "1:..."
-      };
-      ```
-
-4.  **Configure environment variables:**
-
-    - Create a new file named `.env` in the root of the project.
-    - Copy the contents of `.env.example` into `.env`.
-    - Fill in the values for each variable using the Firebase config object from the previous step.
-
-    ```
-    VITE_FIREBASE_API_KEY=your-api-key
-    VITE_FIREBASE_AUTH_DOMAIN=your-auth-domain
-    VITE_FIREBASE_PROJECT_ID=your-project-id
-    VITE_FIREBASE_STORAGE_BUCKET=your-storage-bucket
-    VITE_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
-    VITE_FIREBASE_APP_ID=your-app-id
-    ```
-
-5.  **Run the development server:**
-
-    ```bash
-    npm run dev
-    ```
-
-    The application should now be running at `http://localhost:5173`.
-
-### Deploying Firestore Rules
-
-To secure your database, you need to deploy the provided security rules.
-
-1.  **Install the Firebase CLI:**
-
-    ```bash
-    npm install -g firebase-tools
-    ```
-
-2.  **Login to Firebase:**
-
-    ```bash
-    firebase login
-    ```
-
-3.  **Initialize Firebase in your project (if you haven't already):**
-
-    ```bash
-    firebase init
-    ```
-
-    - Select **Firestore**.
-    - Choose the Firebase project you created.
-    - Keep the default file names.
-
-4.  **Deploy the rules:**
-
-    - Copy the contents of the `firestore.rules` file in this repository into the `firestore.rules` file generated by the CLI.
-    - Run the following command:
-
-      ```bash
-      firebase deploy --only firestore:rules
-      ```
-
-## Available Scripts
-
-- `npm run dev`: Starts the development server.
-- `npm run build`: Builds the app for production.
-- `npm run preview`: Previews the production build locally.
-
-## Known Limitations
-
-- **No server-side rendering**: This is a client-side rendered application.
-- **Limited error handling**: Error handling is basic and could be improved with more specific messages.
-- **No tests**: This project does not include a testing suite.
+*   [TypeScript Documentation](https://www.typescriptlang.org/docs/)
+*   [Node.js Documentation](https://nodejs.org/docs/)
+*   [Jest Documentation](https://jestjs.io/docs/getting-started)
+*   [NPM Documentation](https://docs.npmjs.com/)
